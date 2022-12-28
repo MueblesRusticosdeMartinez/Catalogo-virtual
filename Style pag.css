@@ -1,0 +1,446 @@
+/*Menu*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+body{
+    background: #f6f6f6;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: orange;
+    box-shadow: 0 4px 25px -22px black;
+    z-index: 2;
+}
+
+.header-content{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    height: 100px;
+}
+
+.menu nav{
+    height: 100%;
+}
+
+.menu nav ul{
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.menu nav ul li{
+    height: 100%;
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.menu nav ul li a{
+    font-size: 20px;
+    color: 	white;
+}
+
+.menu nav ul li a:hover{
+    color: yellow;
+    transition: color 300ms;
+}
+
+/*Slider*/
+
+.container-slide{
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    margin-bottom: 40px;
+    margin-right: 30px;
+}
+
+.item-slide img{
+    max-width: 100%;
+}
+
+.container-slide{
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.slide{
+    display: flex;
+    transform: translate3d(0, 0, 0);
+    transition: all 600ms;
+    animation-name: autoplay;
+    animation-duration: 6.5s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.item-slide{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+}
+
+.pagination{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+}
+
+.pagination-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid gray;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 10px;
+    text-align: center;
+    transition: all 300ms;
+}
+
+.pagination-item:hover{
+    transform: scale(2);
+}
+
+.pagination-item img{
+    display: inline-block;
+    max-width: none;
+    height: 100%;
+    transform: scale(1);
+    opacity: 0;
+    transform: all 300ms;
+}
+
+.pagination-item:hover img{
+    opacity: 1;
+    transform: scale(1);
+}
+
+input[id="1"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(0, 0, 0);
+}
+
+input[id="1"]:checked ~ .pagination .pagination-item[for="1"]{
+    background: white;
+}
+
+input[id="2"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 1), 0, 0);
+}
+
+input[id="2"]:checked ~ .pagination .pagination-item[for="2"]{
+    background: white;
+}
+
+input[id="3"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 2), 0, 0);
+}
+
+input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
+    background: white;
+}
+
+@keyframes autoplay{
+    33%{
+        transform: translate3d(calc(-100% *0), 0, 0);
+    }
+
+    66%{
+        transform: translate3d(calc(-100% *1), 0, 0);
+    }
+
+    100%{
+        transform: translate3d(calc(-100% *2), 0, 0);
+    }
+}
+
+/*Cuerpo*/
+
+.Nombre{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.sub-title{
+    font-size: 30px;
+    color: black;
+}
+
+.container-content{
+    font-size: 40px;
+    color: black;
+}
+
+.container-content h5{
+    font-size: 30px;
+    color: black;
+}
+
+.container-content h2{
+    font-size: 30px;
+    color: green;
+}
+
+.existencia{
+    font-size: 30px;
+    color: red;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.Medidas{
+    font-size: 35px;
+    color: black;
+}
+
+.Numeros{
+    font-size: 25px;
+    color: rgb(153, 152, 152);
+    margin-bottom: 80px;
+}
+
+.Title-description{
+    font-size: 35px;
+    color: black;
+}
+
+.Cuerpo{
+    font-size: 25px;
+    color: rgb(153, 152, 152);;
+}
+
+.sub-title{
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+
+.Valor{
+    font-size: 70px;
+}
+
+
+.container-content p{
+    margin-top: 30px;
+}
+
+.contenido{
+    margin-left: 80px;
+    margin-right: 250px;
+    margin-bottom: 80px;
+    margin-top: 90px;
+}
+
+/*Footer*/
+
+.container-footer{
+    width: 100%;
+    padding: 40px 0;
+    background: #f7f7f7;
+    margin-top: 40px;
+}
+
+.container-footer footer .logo-footer{
+    text-align: center;
+}
+
+.container-footer footer .logo-footer img{
+    width: 100px;
+}
+
+.container-footer h4{
+    text-align: center;
+    margin-top: 40px;
+    color: #8e8e8e;
+    font-weight: 500;
+}
+
+/*Responsive*/
+
+/*header*/
+
+@media screen and (max-width: 1220px){
+
+    .header-content{
+        max-width: 1000px;
+        padding: 0 20px;
+    }
+
+    header{
+        height: 70px;
+    }
+
+    .logo{
+        height: 70px;
+        font-size: 12px;
+    }
+    
+    .menu{
+        height: 70px;
+    }
+    
+    .menu nav ul li a{
+        font-size: 16px;
+        color: white;
+    }
+    
+}
+
+/*cuerpo*/
+
+@media screen and (max-width: 1220px){
+
+    .contenido{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 80px;
+        margin-top: 62px;
+    }
+
+    .Nombre{
+        font-size: 35px;
+        margin-bottom: 5px;
+    }
+    
+    .sub-title{
+        font-size: 30px;
+        color: black;
+    }
+    
+    .container-content{
+        font-size: 40px;
+        color: black;
+    }
+    
+    .container-content h5{
+        font-size: 30px;
+        color: black;
+    }
+    
+    .container-content h2{
+        font-size: 30px;
+        color: green;
+    }
+    
+    .existencia{
+        font-size: 30px;
+        color: red;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .Medidas{
+        font-size: 35px;
+        color: black;
+    }
+    
+    .Numeros{
+        font-size: 25px;
+        color: rgb(153, 152, 152);
+        margin-bottom: 20px;
+    }
+    
+    .Title-description{
+        font-size: 35px;
+        color: black;
+    }
+    
+    .Cuerpo{
+        font-size: 25px;
+        color: rgb(153, 152, 152);;
+    }
+    
+    .sub-title{
+        margin-bottom: 50px;
+        font-size: 50px;
+    }
+    
+    .Valor{
+        font-size: 75px;
+    }
+    
+    
+    .container-content p{
+        margin-top: 20px;
+    }
+
+}
+
+/*footer*/
+
+@media screen and (max-width: 1220px){
+
+        .container-footer{
+            width: 100%;
+            padding: 40px 0;
+            background: #f7f7f7;
+            margin-top: 40px;
+        }
+
+        .container-footer footer{
+            max-width: 1000px;
+            padding: 0 20px;
+        }
+        
+        .container-footer footer .logo-footer{
+            text-align: center;
+        }
+        
+        .container-footer footer .logo-footer img{
+            width: 200px;
+            height: 200px;
+        }
+        
+        .container-footer h4{
+            text-align: center;
+            font-size: 20px;
+            margin-top: 40px;
+            color: #8e8e8e;
+            font-weight: 500;
+        }
+    }
