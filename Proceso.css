@@ -1,0 +1,19 @@
+.imagen img{
+    width: 200px;
+    margin-top: 180px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+}
+
+.rojo{
+    font-size: 30px;
+    font-family: sans-serif;
+    color: red;
+}
+
+.letras{
+    font-family: 'YouTube Sans', sans-serif;
+    font-family: 'YouTube Sans Dark', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
