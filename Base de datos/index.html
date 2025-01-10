@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Ventas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="login-screen">
+        <div class="login-box">
+            <h2>Bienvenido a la Base de Datos</h2>
+            <form id="login-form">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <header style="display: none;">
+        <img src="Img/Logo.png" alt="Logo de la Empresa" class="logo">
+        <h1>Muebles Rústicos de Martínez</h1>
+    </header>
+    <div class="container" style="display: none;">
+        <nav>
+            <ul>
+                <li><a href="#" id="home-link">Registro de ventas</a></li>
+                <li><a href="#" id="chart-link">Gráfica Semanal</a></li>
+                <li><a href="#" id="sales-log-link">Historial de Ventas</a></li>
+                <li><a href="#" id="inventory-link">Inventario</a></li>
+            </ul>
+        </nav>
+
+        <div id="home-section" class="section active">
+            <h2>Registro de Ventas Diarias</h2>
+            <form id="sales-form">
+                <label for="product">Producto:</label>
+                <input type="text" id="product" required>
+
+                <label for="amount">Monto:</label>
+                <input type="number" id="amount" required>
+
+                <button type="submit">Agregar Venta</button>
+            </form>
+            <h3>Ventas del Día</h3>
+            <ul id="sales-list"></ul>
+            <h4>Total del Día: $<span id="total">0.00</span></h4>
+        </div>
+
+        <div id="chart-section" class="section">
+            <h2>Gráfica de Ventas Semanales</h2>
+            <canvas id="weekly-chart"></canvas>
+        </div>
+
+        <div id="sales-log-section" class="section">
+            <h2>Historial de Ventas</h2>
+            <ul id="sales-log"></ul>
+        </div>
+
+        <div id="inventory-section" class="section">
+            <h2>Inventario de Precios</h2>
+            <form id="inventory-form">
+                <label for="inventory-product">Producto:</label>
+                <input type="text" id="inventory-product" required>
+
+                <label for="inventory-price">Precio:</label>
+                <input type="number" id="inventory-price" required>
+
+                <label for="inventory-quantity">Cantidad:</label>
+                <input type="number" id="inventory-quantity" required>
+
+                <button type="submit">Agregar al Inventario</button>
+            </form>
+            <h3>Búsqueda en Inventario</h3>
+            <input type="text" id="search-box" placeholder="Buscar producto...">
+            <ul id="inventory-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
